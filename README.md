@@ -1,7 +1,7 @@
 # SDBM
 La Société Des Bières du Monde (SDBM) a fait appel à notre équipe pour créer un site web dédié aux bières du monde. Ce site a pour objectif de présenter leur catalogue de produits, d'informer les clients sur les caractéristiques des différentes bières, et de faciliter les commandes en ligne.
 ---
-## Installation 
+## Installation
 Pour réinstaller les dépendances manquantes (le dossier vendor) dans un projet Symfony après avoir cloné le dépôt GitLab, vous devez utiliser Composer, qui est le gestionnaire de dépendances de PHP.
 
 Voici les étapes à suivre :

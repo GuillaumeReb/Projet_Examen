@@ -1,43 +1,127 @@
 {% extends 'base.html.twig' %}
 
- {% block stylesheets %}  
+{% block stylesheets %}
 <style>
- .rustic-title {
-    font-family: 'Cinzel', serif;
-    font-size: 3em;
-    color: #6B4226;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    border-bottom: 5px solid #B8860B;
-    padding-bottom: 10px;
-    text-align:center;
+  /* Typographie et palette de couleurs */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
   }
 
-  .img{
+  .rustic-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5em;
+    color: #6B4226;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid #B8860B;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .rustic-title:hover {
+    color: #B8860B;
+    border-bottom-color: #6B4226;
+    text-shadow: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 80px;
+    margin-top: 40px;
+  }
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    color: #B8860B;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .intro-text {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 40px;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .img-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .img-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #6B4226;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;
   }
+
+  .cta-button:hover {
+    background-color: #B8860B;
+    transform: translateY(-5px);
+  }
+
 </style>
- {% endblock %}
+{% endblock %}
+
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
 <main class="container">
-<section class="row">
- <div class="col-12">
+  <h1 class="rustic-title">Bienvenue chez SDBM</h1>
 
- <h1 class="rustic-title">Bienvenue chez SDBM</h1>
- <br>
- <br>
+  <h2>Société Des Bières du Monde</h2>
 
- <div class="img">
- <img src="../assets/images/Bieres.png" alt="2 verres de bières" width="600" height="600">
- <div>
- <br>
- <br>
- </div>
- </div>
- </div>
-</section>
+  <p class="intro-text">
+    Découvrez notre passion pour la bière artisanale. Nos créations sont soigneusement brassées pour offrir des saveurs uniques et authentiques.
+  </p>
+
+  <div class="img-container">
+    <img src="{{ asset('images/Bieres.png') }}" alt="2 verres de bières">
+  </div>
+
+  <a href="{{ path('app_article_index') }}" class="cta-button">En savoir plus</a>
 </main>
-
-
 {% endblock %}

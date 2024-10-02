@@ -1,0 +1,4 @@
+<form method="post" action="{{ path('app_pays_delete', {'id': pay.id}) }}" onsubmit="return confirm('Vous êtes sûr le point de supprimer un pays, voulez-vous continuer ?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ pay.id) }}">
+    <button class="btn btn-danger">{{ 'action.delete'|trans }}</button>
+</form>

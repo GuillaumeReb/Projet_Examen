@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+ {% block stylesheets %}  
+<style>
+ .rustic-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3em;
+    color: #6B4226;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    border-bottom: 5px solid #B8860B;
+    padding-bottom: 10px;
+    text-align:center;
+  }
+
+  .img{
+    text-align: center;
+  }
+</style>
+ {% endblock %}
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<main class="container">
+<section class="row">
+ <div class="col-12">
+
+ <h1 class="rustic-title">Bienvenue chez SDBM</h1>
+ <br>
+ <br>
+
+ <div class="img">
+ <img src="../assets/images/Bieres.png" alt="2 verres de bières" width="600" height="600">
+ <div>
+ <br>
+ <br>
+ </div>
+ </div>
+ </div>
+</section>
+</main>
+
+
+{% endblock %}

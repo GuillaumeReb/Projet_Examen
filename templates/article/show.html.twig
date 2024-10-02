@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+<main class="container">
+<section class="row">
+<div class="col-12">
+<br>
+    <h1>Supprimer un Article</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>{{ 'label.id'|trans }}</th>
+                <td>{{ article.id }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'label.name'|trans }} de l'Article</th>
+                <td>{{ article.name }}</td>
+            </tr>
+            <tr>
+                <th>Prix d'Achat</th>
+                <td>{{ article.prixAchat }}</td>
+            </tr>
+            <tr>
+                <th>Volume</th>
+                <td>{{ article.volume }}</td>
+            </tr>
+            <tr>
+                <th>Titrage</th>
+                <td>{{ article.titrage }}</td>
+            </tr>
+        </tbody>
+    </table>
+         <div class="d-grid gap-2 d-md-block">
+             <form method="post" action="{{ path('app_article_delete', {'id': article.id}) }}" onsubmit="return confirm('Vous êtes sûr le point de supprimer un article, voulez-vous continuer ?');">
+                 <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ article.id) }}">
+                 <a class="btn btn-primary me-md-2" href="{{ path('app_article_index') }}">{{ 'action.back'|trans }}</a>
+                 <button class="btn btn-danger">{{ 'action.delete'|trans }}</button>
+             </form>
+        </div>
+
+<br>
+</div>
+</section>
+</main>
+
+{% endblock %}

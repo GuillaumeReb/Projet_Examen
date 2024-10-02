@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Typebiere{% endblock %}
+
+{% block body %}
+<main class="container">
+    <section class="row">
+        <div class="col-12">
+        <br>
+        <h1>Modifier un Type de biere</h1>
+
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <br>
+        <button class="btn btn-success">{{ 'action.save'|trans }}</button>
+        <a class="btn btn-primary me-md-2" href="{{ path('app_typebiere_index') }}">{{ 'action.back'|trans }}</a>
+        {{ form_end(form) }}
+
+        <br>
+        </div>
+    </section>
+</main>
+{% endblock %}

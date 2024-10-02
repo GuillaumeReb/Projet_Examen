@@ -1,0 +1,35 @@
+{# Sert pour la suppression #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Typebiere{% endblock %}
+
+{% block body %}
+<main class="container">
+    <section class="row">
+        <div class="col-12">
+            <br>
+            <h1>Supprimer un Type de bière</h1>
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>{{ 'label.id'|trans }}</th>
+                            <td>{{ typebiere.id }}</td>
+                        </tr>
+                        <tr>
+                            <th>{{ 'label.name'|trans }}</th>
+                            <td>{{ typebiere.name }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <div class="d-grid gap-2 d-md-block">
+                 <form method="post" action="{{ path('app_typebiere_delete', {'id': typebiere.id}) }}" onsubmit="return confirm('Vous êtes sûr le point de supprimer un type de bière, voulez-vous continuer ?');">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ typebiere.id) }}">
+                    <a class="btn btn-primary me-md-2" href="{{ path('app_typebiere_index') }}">{{ 'action.back'|trans }}</a>
+                    <button class="btn btn-danger">{{ 'action.delete'|trans }}</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

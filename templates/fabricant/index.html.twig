@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Fabricant index{% endblock %}
+
+{% block body %}
+<main class="container">
+<section class="row">
+<div class="col-12">
+<br>
+    <h1 style="text-align:center">{{ 'title.manufacturers'|trans }}</h1>
+<br>
+ <a class="btn btn-primary" href="{{ path('app_fabricant_new') }}">{{ 'action.create'|trans }}</a>
+ <br>
+<br>
+    <table class="table table-striped table-hover table-bordered align-middle">
+        <thead class="table-warning">
+            <tr>
+                <th style="text-align:center">{{ 'label.id'|trans }}</th>
+                <th style="text-align:center">{{ 'label.name'|trans }}</th>
+                <th style="text-align:center">{{ 'label.actions'|trans }}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fabricant in pagination.items %}
+            <tr>
+                <td class="table-light" style="text-align:center">{{ fabricant.id }}</td>
+                <td class="table-light" style="text-align:center">{{ fabricant.name }}</td>
+                <td class="table-light" style="text-align:center">
+                    <a class="btn btn-success" href="{{ path('app_fabricant_edit', {'id': fabricant.id}) }}">{{ 'action.update'|trans }}</a>
+                    <a class="btn btn-danger" href="{{ path('app_fabricant_show', {'id': fabricant.id}) }}">{{ 'action.delete'|trans }}</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {# Sert a la pagination les boutons en dessous du tableau #}
+     <div class="d-flex justify-content-center mt-4">
+                {{ knp_pagination_render(pagination) }}
+            </div>
+<br>
+</div>
+</section>
+</main>
+   
+{% endblock %}

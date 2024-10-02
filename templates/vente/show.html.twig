@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Vente{% endblock %}
+
+{% block body %}
+<main class="container">
+    <section class="row">
+        <div class="col-12">
+            <br>
+    <h1>Vente</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>{{ 'label.id'|trans }}</th>
+                <td>{{ vente.id }}</td>
+            </tr>
+            <tr>
+                <th>Quantite</th>
+                <td>{{ vente.quantite }}</td>
+            </tr>
+            <tr>
+                <th>Prix Vente</th>
+                <td>{{ vente.prixVente }}</td>
+            </tr>
+            <tr>
+                <th>Annee</th>
+                <td>{{ vente.annee }}</td>
+            </tr>
+            <tr>
+                <th>Numero Ticket</th>
+                <td>{{ vente.numeroTicket }}</td>
+            </tr>
+        </tbody>
+    </table>
+            <div class="d-grid gap-2 d-md-block">
+                <form method="post" action="{{ path('app_couleur_delete', {'id': vente.id}) }}" onsubmit="return confirm('Vous êtes sûr le point de supprimer une vente, voulez-vous continuer ?');">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ vente.id) }}">
+                    <a class="btn btn-primary me-md-2" href="{{ path('app_vente_index') }}">{{ 'action.back'|trans }}</a>
+                    <button class="btn btn-danger">{{ 'action.delete'|trans }}</button>
+                </form>
+            </div>
+            <br>
+        </div>
+    </section>
+</main>
+
+
+{% endblock %}

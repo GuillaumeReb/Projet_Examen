@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un Continent{% endblock %}
+
+{% block body %}
+<main class="container">
+<section class="row">
+<div class="col-12">
+<br>
+    <h1>Ajouter un Continent</h1>
+    <br>
+    <br>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <br>   
+    <button class="btn btn-success">{{ 'action.save'|trans }}</button>
+     <a class="btn btn-primary me-md-2" href="{{ path('app_continent_index') }}">{{ 'action.back'|trans }}</a>
+    {{ form_end(form) }}   
+    <br>
+    <br>
+</div>
+</section>
+</main>
+
+{% endblock %}

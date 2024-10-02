@@ -1,0 +1,20 @@
+image: composer:2
+
+# Cache qui sera partagé en tre chaque job
+cache:
+    key: "${CI_PROJECT_ID}_build_cache"
+    paths:
+        - vendor/
+        - node_modules/
+
+stages:
+    - build-test
+
+build-qa:
+    stage: build-test
+    when: manual
+    script:
+        - composer install --dev
+        - php bin/console cache:warmup --env=dev
+        - vendor/bin/phpcs
+        - vendor/bin/phpstan analyse src --level=7 --memory-limit=1G -c phpstan.neon

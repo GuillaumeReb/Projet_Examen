@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ticket{% endblock %}
+
+{% block body %}
+<main class="container">
+    <section class="row">
+        <div class="col-12">
+            <br>
+    <h1>Supprimer un Ticket</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>{{ 'label.id'|trans }}</th>
+                <td>{{ ticket.id }}</td>
+            </tr>
+            <tr>
+                <th>Annee</th>
+                <td>{{ ticket.annee }}</td>
+            </tr>
+            <tr>
+                <th>Numero Ticket</th>
+                <td>{{ ticket.numeroTicket }}</td>
+            </tr>
+            <tr>
+                <th>Date Vente</th>
+                <td>{{ ticket.dateVente ? ticket.dateVente|date('d-m-Y H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+            <div class="d-grid gap-2 d-md-block">
+
+                <form method="post" action="{{ path('app_ticket_delete', {'id': ticket.id}) }}" onsubmit="return confirm('Vous êtes sûr le point de supprimer un ticket, voulez-vous continuer ?');">
+                    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ ticket.id) }}">
+                    <a class="btn btn-primary me-md-2" href="{{ path('app_ticket_index') }}">{{ 'action.back'|trans }}</a>
+                    <button class="btn btn-danger">{{ 'action.delete'|trans }}</button>
+                </form>
+            </div>
+            <br>
+        </div>
+    </section>
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{# Sert pour la suppression #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Fabricant{% endblock %}
+
+{% block body %}
+<main class="container">
+<section class="row">
+<div class="col-12">
+<br>
+    <h1>Supprimer un Fabricant</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>{{ 'label.id'|trans }}</th>
+                <td>{{ fabricant.id }}</td>
+            </tr>
+            <tr>
+                <th>{{ 'label.name'|trans }}</th>
+                <td>{{ fabricant.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+ 
+ <form method="post" action="{{ path('app_fabricant_delete', {'id': fabricant.id}) }}" onsubmit="return confirm('Vous êtes sûr le point de supprimer un fabricant, voulez-vous continuer ?');">
+    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ fabricant.id) }}">
+    <button class="btn btn-danger">{{ 'action.delete'|trans }}</button>
+    <a class="btn btn-primary me-md-2" href="{{ path('app_fabricant_index') }}">{{ 'action.back'|trans }}</a>
+</form>
+
+</div>
+</section>
+</main>
+{% endblock %}

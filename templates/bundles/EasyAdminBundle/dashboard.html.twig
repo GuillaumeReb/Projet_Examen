@@ -1,0 +1,52 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class="dashboard">
+        <h1>{{ 'label.dashboard'|trans }}</h1>
+
+        <div class="counter-boxes">
+            {% for key, value in counters %}
+                <div class="counter-box">
+                    <h2>
+                        {{ 'label.number'|trans }}
+                        {% if key starts with 'a' or key starts with 'e' or key starts with 'i' or key starts with 'o' or key starts with 'u' or key starts with 'h' %}
+                            d'{{ ('label.' ~ key) | trans }}
+                        {% else %}
+                            de {{ ('label.' ~ key) | trans }}
+                        {% endif %}
+                    </h2>
+                    <p>{{ value }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Section pour les graphiques -->
+        <div class="charts-section">
+            <h2>Graphiques</h2>
+            <div class="chart-placeholder">
+                <!-- Ici, insérer des graphiques dans le futur -->
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <canvas id="myChart"></canvas>
+                <script>
+                    var ctx = document.getElementById('myChart').getContext('2d');
+                    var myChart = new Chart(ctx, {
+                        type: '{{ chart.type }}',
+                        data: {
+                            labels: {{ chart.data.labels|json_encode|raw }},
+                            datasets: {{ chart.data.datasets|json_encode|raw }}
+                        },
+                        options: {{ chart.options|json_encode|raw }}
+                    });
+                </script>
+
+
+            </div>
+        </div>
+
+    </div>
+{% endblock %}

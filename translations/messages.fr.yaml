@@ -1,0 +1,23 @@
+action:
+  create: Ajouter
+  update: Modifier
+  delete: Supprimer
+  save: Enregistrer
+  back: Retour
+
+label:
+  id: Id
+  actions: Actions
+  name: Nom
+  color: couleur
+  type: type
+  item: article
+  brand: marque
+  dashboard: Tableau de bord
+  number: Nombres
+
+title:
+  continents: Continents
+  country: Pays
+  manufacturers: Fabricants
+  items: Articles

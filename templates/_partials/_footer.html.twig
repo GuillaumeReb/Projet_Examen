@@ -1,7 +1,42 @@
- <footer class="container-fluid bg-light">
+ {% block stylesheets %}
+<style>
+  footer {
+    background-color: #343a40; /* Couleur de fond plus sombre */
+    color: white; /* Texte blanc */
+    padding: 40px 0; /* Espace autour du contenu */
+  }
 
-        <h5>Site web propulsé par Symfony 6<h5>
-        <br>
-        <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération<p>
+  .footer-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
 
- </footer>
+  .footer-text {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  footer h5,
+  footer p {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    footer .text-md-left,
+    footer .text-md-right {
+      text-align: center !important;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block footer %}
+<footer class="container-fluid bg-dark text-white py-4">
+    <div class="text-center">
+        <h5 class="footer-title">Site web propulsé par Symfony 6</h5>
+        <p class="footer-text">L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+    </div>
+</footer>
+{% endblock %}

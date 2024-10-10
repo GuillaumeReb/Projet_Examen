@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/tables.css') }}">
+{% endblock %}
+
 {% block title %}Article index{% endblock %}
 
 {% block body %}
@@ -8,7 +12,7 @@
 <section class="row">
 <div class="col-12">
 <br>
-    <h1 style="text-align:center">{{ 'title.items'|trans }}</h1>
+    <h1 class="rustic-title" style="text-align:center">{{ 'title.items'|trans }}</h1>
 <br>
      <a class="btn btn-primary me-md-2" href="{{ path('app_article_new') }}">{{ 'action.create'|trans }}</a>
 <br>

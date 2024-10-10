@@ -1,18 +1,9 @@
 {% extends 'base.html.twig' %}
-{% block stylesheets %}  
-<style>
-   .vintage-title {
-    font-family: 'Great Vibes', cursive;
-    font-size: 4em;
-    color: #D4A017;
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
-    border-top: 2px dotted #8B4513;
-    border-bottom: 2px dotted #8B4513;
-    padding: 10px 0;
-  }
-</style>
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/tables.css') }}">
 {% endblock %}
+
 {% block title %}Continent index{% endblock %}
 
 {% block body %}
@@ -20,7 +11,7 @@
 <section class="row">
 <div class="col-12">
 <br>
-    <h1 class="vintage-title" style="text-align:center">{{ 'title.continents'|trans }}</h1>
+    <h1 class="rustic-title" style="text-align:center">{{ 'title.continents'|trans }}</h1>
     <br>
 <a class="btn btn-primary" href="{{ path('app_continent_new') }}" role="button">{{ 'action.create'|trans }}</a>
 <br>

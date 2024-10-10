@@ -1,0 +1,57 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #343a40; /* Couleur de fond sombre pour correspondre au footer */
+    padding: 15px 20px;
+  }
+
+  .navbar-brand {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8em;
+    color: #f39c12; /* Couleur dorée pour le logo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar-brand:hover {
+    color: #ffffff;
+  }
+
+  .nav-link {
+    color: white;
+    font-size: 1.1em;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #f39c12; /* Couleur dorée au survol ou lorsqu'elle est active */
+  }
+
+  .dropdown-menu {
+    background-color: #343a40;
+    border: none;
+    border-radius: 0;
+  }
+
+  .dropdown-item {
+    color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f39c12;
+    color: #343a40;
+  }
+
+  .navbar-toggler {
+    border-color: #f39c12;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #f39c12;
+  }
+
+  .dropdown-divider {
+    border-color: #f39c12;
+  }

@@ -1,35 +1,5 @@
- {% block stylesheets %}
-<style>
-  footer {
-    background-color: #343a40; /* Couleur de fond plus sombre */
-    color: white; /* Texte blanc */
-    padding: 40px 0; /* Espace autour du contenu */
-  }
-
-  .footer-title {
-    font-family: 'Cinzel', serif;
-    font-size: 1.5em;
-    margin-bottom: 15px;
-  }
-
-  .footer-text {
-    font-size: 0.9em;
-    line-height: 1.6;
-    margin-bottom: 0;
-  }
-
-  footer h5,
-  footer p {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 768px) {
-    footer .text-md-left,
-    footer .text-md-right {
-      text-align: center !important;
-    }
-  }
-</style>
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
 {% endblock %}
 
 {% block footer %}

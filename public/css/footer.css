@@ -1,0 +1,33 @@
+footer {
+   
+    bottom: 0;
+    width: 100%;
+    background-color: #403734; /* Couleur de fond plus sombre */
+    color: white; /* Texte blanc */
+    padding: 40px 0; /* Espace autour du contenu */
+    z-index: 1000;
+  }
+
+  .footer-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+
+  .footer-text {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  footer h5,
+  footer p {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    footer .text-md-left,
+    footer .text-md-right {
+      text-align: center !important;
+    }
+  }

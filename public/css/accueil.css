@@ -1,39 +1,11 @@
-/* Style pour toutes les pages côté clients */
-.rustic-title {
-    font-family: 'Cinzel', serif;
-    font-size: 3.5em;
-    color: #6B4226;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    border-bottom: 5px solid #B8860B;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-    text-align: center;
-    letter-spacing: 2px;
-    transition: all 0.3s ease;
-  }
-
-.rustic-title:hover {
-    color: #B8860B;
-    border-bottom-color: #6B4226;
-    text-shadow: none;
-  }
-
-  .container {
-    flex: 1; /* Le contenu prend tout l'espace disponible entre la barre de navigation et le footer */
-    padding-bottom: 10em;
-    padding-top: 2em;
-  }
-
-
-
 /* Style pour la page d'accueil */
 
- body {
+body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-   
+    height: 100%;
    
   }
 

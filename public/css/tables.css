@@ -1,0 +1,28 @@
+/* .vintage-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    color: #D4A017;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+    border-top: 2px dotted #8B4513;
+    border-bottom: 2px dotted #8B4513;
+    padding: 10px 0;
+  } */
+
+  .rustic-title {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5em;
+    color: #6B4226;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    border-bottom: 5px solid #B8860B;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .rustic-title:hover {
+    color: #B8860B;
+    border-bottom-color: #6B4226;
+    text-shadow: none;
+  }

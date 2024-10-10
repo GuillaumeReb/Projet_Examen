@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/tables.css') }}">
+{% endblock %}
+
 {% block title %}Fabricant index{% endblock %}
 
 {% block body %}
@@ -7,7 +11,7 @@
 <section class="row">
 <div class="col-12">
 <br>
-    <h1 style="text-align:center">{{ 'title.manufacturers'|trans }}</h1>
+    <h1 class="rustic-title" style="text-align:center">{{ 'title.manufacturers'|trans }}</h1>
 <br>
  <a class="btn btn-primary" href="{{ path('app_fabricant_new') }}">{{ 'action.create'|trans }}</a>
  <br>

@@ -27,11 +27,11 @@ body {
     text-shadow: none;
   }
 
-  .container {
-    flex: 1; /* Le contenu prend tout l'espace disponible entre la barre de navigation et le footer */
+  /* .container {
+    flex: 1;
     padding-bottom: 10em;
     padding-top: 2em;
-  }
+  } */
 
   .containerAccueil {
     display: flex;

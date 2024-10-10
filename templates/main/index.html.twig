@@ -119,7 +119,9 @@
   </p>
 
   <div class="img-container">
-    <img src="{{ asset('images/Bieres.png') }}" alt="2 verres de bières">
+    {# chemin pour image en local
+    <img src="{{ asset('images/Bieres.png') }}" alt="2 verres de bières"> #}
+    <img src="../assets/images/Bieres.png" alt="2 verres de bières">
   </div>
 
   <a href="{{ path('app_article_index') }}" class="cta-button">En savoir plus</a>

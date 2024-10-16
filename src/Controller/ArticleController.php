@@ -17,7 +17,8 @@ class ArticleController extends AbstractController
     #[Route('/', name: 'app_article_index', methods: ['GET'])]
     public function index(ArticleRepository $articleRepository, PaginatorInterface $paginator, Request $request): Response
     {
-        $queryBuilder = $articleRepository->createQueryBuilder('t');
+        $queryBuilder = $articleRepository->createQueryBuilder('t')
+                        ->orderBy('t.id', 'ASC');
         $pagination = $paginator->paginate(
             $queryBuilder,
             $request->query->getInt('page', 1),

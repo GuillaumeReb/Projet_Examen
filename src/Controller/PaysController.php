@@ -17,7 +17,8 @@ class PaysController extends AbstractController
     #[Route('/', name: 'app_pays_index', methods: ['GET'])]
     public function index(PaysRepository $paysRepository, PaginatorInterface $paginator, Request $request): Response
     {
-        $queryBuilder = $paysRepository->createQueryBuilder('t');
+        $queryBuilder = $paysRepository->createQueryBuilder('t')
+                                    ->orderBy('t.id', 'ASC');
         $pagination = $paginator->paginate(
             $queryBuilder,
             $request->query->getInt('page', 1),

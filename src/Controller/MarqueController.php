@@ -17,7 +17,8 @@ class MarqueController extends AbstractController
     #[Route('/', name: 'app_marque_index', methods: ['GET'])]
     public function index(MarqueRepository $marqueRepository, PaginatorInterface $paginator, Request $request): Response
     {
-        $queryBuilder = $marqueRepository->createQueryBuilder('t');
+        $queryBuilder = $marqueRepository->createQueryBuilder('t')
+                                        ->orderBy('t.id', 'ASC');
         $pagination = $paginator->paginate(
             $queryBuilder,
             $request->query->getInt('page', 1),

@@ -133,6 +133,7 @@ class DashboardController extends AbstractDashboardController
         return parent::configureCrud()
             ->setPaginatorPageSize(15)
             ->showEntityActionsInlined()
+            ->setDefaultSort(['id' => 'ASC'])
             ;
     }
 

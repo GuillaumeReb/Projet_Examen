@@ -17,7 +17,8 @@ class VenteController extends AbstractController
     #[Route('/', name: 'app_vente_index', methods: ['GET'])]
     public function index(VenteRepository $venteRepository, PaginatorInterface $paginator, Request $request): Response
     {
-        $queryBuilder = $venteRepository->createQueryBuilder('t');
+        $queryBuilder = $venteRepository->createQueryBuilder('t')
+                                        ->orderBy('t.id', 'ASC');
         $pagination = $paginator->paginate(
             $queryBuilder,
             $request->query->getInt('page', 1),

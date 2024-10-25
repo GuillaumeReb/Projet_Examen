@@ -1,4 +1,7 @@
 /* Style de la pagination personnalisée */
+/* Le fichier pour la pagination est : twitter_bootstrap_v4_pagination.html.twig */
+/* Le chemin : vendor/knplabs/knp-paginator-bundle/Templates\Pagination */
+
 .custom-pagination .pagination {
     display: flex;
     justify-content: center;
@@ -44,8 +47,4 @@
     font-weight: bold;
     color: #6B4226;
 }
-ul.pagination li a,
-ul.pagination li.current a {
-    color: red !important;
-    text-decoration: none; /* Si le lien est souligné */
-}
+

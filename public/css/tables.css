@@ -37,7 +37,7 @@ body {
   .rustic-text {
     font-family: 'Cinzel', serif;
     font-size: 1.2em;
-    font-weight: bold !important;
+    font-weight: bold ;
     color: #6B4226;
     text-align: center;
     max-width: 600px;
@@ -71,39 +71,5 @@ body {
   border-left: 5px solid #B8860B !important;
   border-radius: 6px !important;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15) !important;
-}
-
-.rustic-table {
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-  border-collapse: collapse;
-  font-family: 'Montserrat', sans-serif;
-  color: #6B4226;
-  background-color: #f2e1c9;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.rustic-table th,
-.rustic-table td {
-  padding: 12px 20px;
-  border: 1px solid #B8860B;
-  text-align: left;
-  font-size: 1em;
-  color: #6B4226;
-}
-
-.rustic-table th {
-  font-family: 'Cinzel', serif;
-  font-weight: bold;
-  background-color: #B8860B;
-  color: #fff;
-  font-size: 1.1em;
-}
-
-.rustic-table tr:nth-child(even) {
-  background-color: #f8f9fa;
 }
 

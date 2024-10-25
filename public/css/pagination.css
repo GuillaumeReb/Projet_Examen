@@ -44,3 +44,8 @@
     font-weight: bold;
     color: #6B4226;
 }
+ul.pagination li a,
+ul.pagination li.current a {
+    color: red !important;
+    text-decoration: none; /* Si le lien est souligné */
+}

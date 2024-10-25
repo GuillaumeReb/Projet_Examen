@@ -13,5 +13,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     changePhrase();
-    setInterval(changePhrase, 60000);
+    setInterval(changePhrase, 30000);
 });

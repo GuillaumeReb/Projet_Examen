@@ -10,27 +10,28 @@
 <main class="container">
     <section class="row">
     <div class="col-12">
-    <br>
+    
     <h1 class="rustic-title" style="text-align:center">Marques</h1>
     <br>
 
-    <a class="btn btn-primary me-md-2" href="{{ path('app_marque_new') }}">{{ 'action.create'|trans }}</a>
-    <br>
+    {# <a class="btn btn-primary me-md-2" href="{{ path('app_marque_new') }}">{{ 'action.create'|trans }}</a> #}
+    
+     <p class="rustic-text" style="font-weight: bold">La liste des marques</p>
     <br>
     <table class="table table-striped table-hover table-bordered align-middle">
         <thead class="table-warning">
             <tr style="text-align:center">
-                <th>{{ 'label.id'|trans }}</th>
+                {# <th>{{ 'label.id'|trans }}</th> #}
                 <th>{{ 'label.name'|trans }}</th>
                 <th>{{ 'title.country'|trans }}</th>
                 <th>{{ 'title.manufacturers'|trans }}</th>
-                <th>{{ 'label.actions'|trans }}</th>
+                {# <th>{{ 'label.actions'|trans }}</th> #}
             </tr>
         </thead>
         <tbody>
         {% for marque in pagination.items %}
             <tr class="table-light">
-                <td style="text-align:center">{{ marque.id }}</td>
+                {# <td style="text-align:center">{{ marque.id }}</td> #}
                 <td style="text-align:center">{{ marque.name }}</td>                
                 <td style="text-align:center">{{ marque.pays.name }}</td>
                 <td style="text-align:center">
@@ -41,11 +42,11 @@
                     {% endif %}
 
                 </td>
-                <td style="text-align:center">
+                {# <td style="text-align:center">
                     
                     <a class="btn btn-success" href="{{ path('app_marque_edit', {'id': marque.id}) }}">{{ 'action.update'|trans }}</a>
                     <a class="btn btn-danger" href="{{ path('app_marque_show', {'id': marque.id}) }}">{{ 'action.delete'|trans }}</a>
-                </td>
+                </td> #}
             </tr>
         {% else %}
             <tr>

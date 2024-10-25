@@ -10,39 +10,39 @@
 <main class="container">
     <section class="row">
         <div class="col-12">
-            <br>
+            
             <h1 class="rustic-title"  style="text-align:center">Vente</h1>
             <br>
-            <a class="btn btn-primary me-md-2" href="{{ path('app_vente_new') }}">{{ 'action.create'|trans }}</a>
+            {# <a class="btn btn-primary me-md-2" href="{{ path('app_vente_new') }}">{{ 'action.create'|trans }}</a> #}
             <br>
-            <br>
+           
 
     <table class="table table-striped table-hover table-bordered align-middle">
         <thead class="table-warning">
             <tr style="text-align:center">
-                <th>{{ 'label.id'|trans }}</th>
+                {# <th>{{ 'label.id'|trans }}</th> #}
                 <th>{{ 'title.items'|trans }}</th>
                 <th>Quantite</th>
                 <th>Prix Vente</th>
                 <th>Annee</th>
                 <th>Numero Ticket</th>
-                <th>{{ 'label.actions'|trans }}</th>
+                {# <th>{{ 'label.actions'|trans }}</th> #}
             </tr>
         </thead>
         <tbody>
 
         {% for vente in pagination.items %}
             <tr class="table-light", style="text-align:center">
-                <td>{{ vente.id }}</td>
+                {# <td>{{ vente.id }}</td> #}
                 <td> {{ vente.article.name }}</td>
                 <td class="w-25">{{ vente.quantite is defined ? vente.quantite : 'N/A' }}</td>
                 <td>{{ vente.prixVente is defined ? vente.prixVente : 'N/A' }}</td>
                 <td>{{ vente.annee is defined ? vente.annee : 'N/A' }}</td>
                 <td>{{ vente.numeroTicket is defined ? vente.numeroTicket : 'N/A' }}</td>
-                <td>
+                {# <td>
                     <a class="btn btn-success" href="{{ path('app_vente_edit', {'id': vente.id}) }}">{{ 'action.update'|trans }}</a>
                     <a class="btn btn-danger" href="{{ path('app_vente_show', {'id': vente.id}) }}">{{ 'action.delete'|trans }}</a>
-                </td>
+                </td> #}
             </tr>
         {% else %}
             <tr>
